@@ -11,55 +11,146 @@
 
 
     <header>
-        <h1>Datos del pedido</h1>
+        <h1>Formulario de pedido</h1>
     </header>
+    
 
 
     <main>
         <section>
-            <h2>Información del cliente</h2>
+            <h2>Completa los datos de tu pedido</h2>
 
             <form action="#" method="post">
 
             
-                <p>
-                    <label for="nombre">Nombre:</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        required>
-                </p>
+                <fieldset>
+                    <legend>Datos del cliente</legend>
 
-                
-                <p>
-                    <label for="telefono">Teléfono:</label>
-                    <input
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        required>
-                </p>
+                    <p>
+                        <label for="nombre">Nombre:</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required>
+                    </p>
 
-                <p>
-                    <label for="direccion">Dirección:</label>
-                    <input
-                        type="text"
-                        id="direccion"
-                        name="direccion"
-                        required>
-                </p>
+                    <p>
+                        <label for="telefono">Teléfono:</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            required>
+                    </p>
 
-                <button type="submit">Enviar pedido</button>
+                    <p>
+                        <label for="direccion">Dirección:</label>
+                        <input
+                            type="text"
+                            id="direccion"
+                            name="direccion"
+                            required>
+                    </p>
+                </fieldset>
+
+
+        
+                <fieldset>
+                    <legend>Ubicación del pedido</legend>
+
+                    <p>
+                        <label for="barrio">Barrio o sector:</label>
+
+                        <select id="barrio" name="barrio" required>
+                            <option value="">Selecciona una opción</option>
+
+                            <optgroup label="Mao">
+                                <option value="centro-mao">Centro de Mao</option>
+                                <option value="sibila">Sibila</option>
+                                <option value="hatico">Hatico</option>
+                            </optgroup>
+
+                            <optgroup label="Zonas cercanas">
+                                <option value="esperanza">Esperanza</option>
+                                <option value="laguna-salada">Laguna Salada</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </fieldset>
+            
+
+
+            
+                <fieldset>
+                    <legend>Producto solicitado</legend>
+
+                    <p>
+                        <label for="producto">Producto:</label>
+
+                        <input
+                            type="text"
+                            id="producto"
+                            name="producto"
+                            list="productos"
+                            required>
+
+                        <datalist id="productos">
+                            <option value="Guineo">
+                            <option value="Plátano">
+                        </datalist>
+                    </p>
+                </fieldset>
+
+
+            
+                <fieldset>
+                    <legend>Detalles adicionales</legend>
+
+                    <p>
+                        <label for="nota">Nota del pedido:</label>
+                    </p>
+
+                    <p>
+                        <textarea
+                            id="nota"
+                            name="nota"
+                            rows="5"
+                            cols="40"
+                            placeholder="Escribe alguna indicación sobre el pedido"></textarea>
+                    </p>
+                </fieldset>
+    
+
+
+                <fieldset>
+                    <legend>Progreso del pedido</legend>
+
+                    <label for="progreso">Formulario completado:</label>
+                    <progress id="progreso" value="75" max="100">
+                        75%
+                    </progress>
+                </fieldset>
+            
+
+
+            
+                <p>
+                    <button type="submit">Enviar pedido</button>
+                </p>
+        
 
             </form>
         </section>
     </main>
 
 
+
+
     <footer>
         <p>Cooperativa Agrícola de Mao &copy; 2026</p>
     </footer>
+
 
 </body>
 
